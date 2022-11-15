@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "brands",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "Категории",
-    "description": ""
+    "singularName": "brand",
+    "pluralName": "brands",
+    "displayName": "Бренды"
   },
   "options": {
     "draftAndPublish": true
@@ -14,14 +13,7 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "categories"
+      "required": true
     },
     "image": {
       "allowedTypes": [
@@ -34,6 +26,12 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "brands"
     }
   }
 }
