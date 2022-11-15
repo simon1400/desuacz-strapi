@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Продукти",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "float",
+      "required": false
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "кг.",
+        "г.",
+        "л.",
+        "шт."
+      ],
+      "default": "кг.",
+      "required": true
+    },
+    "priceUnit": {
+      "type": "float",
+      "required": true
+    },
+    "amount": {
+      "type": "float"
+    },
+    "margin": {
+      "type": "float"
+    },
+    "relateds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "toRelateds"
+    },
+    "toRelateds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "relateds"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    }
+  }
+}
