@@ -5,7 +5,7 @@ module.exports = {
         transformEntry({ entry }) {
           return {
             ...entry,
-            categoryTitles: entry.category.map(item => item.title),
+            categoryTitles: entry.categories.map(item => item.title),
           }
         },
         settings: {
