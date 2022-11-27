@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_order_sales",
+  "info": {
+    "displayName": "sale",
+    "icon": "angle-up"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}
