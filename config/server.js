@@ -4,4 +4,14 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
+  vercel: {
+    // Required
+    token: env('VERCEL_TOKEN'),
+    // Required
+    projectId: env('VERCEL_PROJECT_ID'),
+    // Required (hooks)
+    triggers: {
+        production: env('VERCEL_TRIGGER_PRODUCTION')
+    }
+  }
 });
