@@ -1,7 +1,10 @@
 module.exports = {
   meilisearch: {
     config: {
+      host: "http://localhost:7700",
+      apiKey: process.env.MEILISEARCH_TOKEN,
       product: {
+        indexName: process.env.MEILISEARCH_PREFIX+'product',
         transformEntry({ entry }) {
           return {
             ...entry,
@@ -26,7 +29,7 @@ module.exports = {
     config: {
       defaultLimit: 50,
       depthLimit: 50,
-      maxLimit: 20,
+      maxLimit: 50,
     }
   }
 }
