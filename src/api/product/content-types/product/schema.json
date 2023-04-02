@@ -88,7 +88,7 @@
     },
     "rank": {
       "type": "biginteger",
-      "required": true
+      "required": false
     }
   }
 }
