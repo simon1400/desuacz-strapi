@@ -85,6 +85,10 @@
     "countInPack": {
       "type": "string",
       "required": false
+    },
+    "rank": {
+      "type": "biginteger",
+      "required": true
     }
   }
 }

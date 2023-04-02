@@ -10,13 +10,14 @@
     "strapi": "strapi",
     "deploy": "pm2 deploy production"
   },
-  "devDependencies": {},
   "dependencies": {
+    "@retikolo/drag-drop-content-types": "^1.3.5",
     "@strapi/plugin-graphql": "^4.8.2",
     "@strapi/plugin-i18n": "4.8.2",
     "@strapi/plugin-users-permissions": "4.8.2",
     "@strapi/strapi": "4.8.2",
     "better-sqlite3": "8.2.0",
+    "sharp": "^0.32.0",
     "strapi-plugin-local-image-sharp": "^1.6.0",
     "strapi-plugin-meilisearch": "^0.9.1"
   },
