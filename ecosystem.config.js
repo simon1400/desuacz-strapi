@@ -18,7 +18,7 @@ module.exports = {
       host : ['89.221.216.23'],
       ref  : 'origin/v2',
       repo : 'git@github.com:simon1400/desuacz-strapi.git',
-      path : '/var/www/desuacz/strapi',
+      path : '/var/www/desuacz/strapi-new',
       'post-deploy' : 'yarn && yarn build && pm2 reload ecosystem.config.js --env production',
     }
   }
