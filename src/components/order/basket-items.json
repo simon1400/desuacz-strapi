@@ -7,35 +7,23 @@
   },
   "options": {},
   "attributes": {
-    "variant": {
-      "type": "string"
-    },
-    "brand": {
-      "type": "string"
-    },
     "price": {
-      "type": "float"
-    },
-    "slug": {
-      "type": "string"
+      "type": "float",
+      "required": true
     },
     "count": {
-      "type": "integer"
-    },
-    "idProduct": {
-      "type": "biginteger"
+      "type": "integer",
+      "required": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "imageUrl": {
       "type": "string"
     },
-    "margin": {
-      "type": "float"
-    },
     "countInPack": {
-      "type": "string"
+      "type": "decimal"
     }
   }
 }

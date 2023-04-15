@@ -10,40 +10,36 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
       "required": true,
-      "unique": true
-    },
-    "content": {
-      "type": "richtext"
-    },
-    "price": {
-      "type": "float",
-      "required": false
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "unit": {
       "type": "enumeration",
       "enum": [
         "кг.",
-        "г.",
         "л.",
         "шт."
       ],
       "default": "кг.",
-      "required": true
-    },
-    "priceUnit": {
-      "type": "float",
-      "required": true
-    },
-    "amount": {
-      "type": "float"
-    },
-    "margin": {
-      "type": "float"
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "relateds": {
       "type": "relation",
@@ -56,14 +52,6 @@
       "relation": "manyToMany",
       "target": "api::product.product",
       "inversedBy": "relateds"
-    },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
     },
     "slug": {
       "type": "uid",
@@ -82,13 +70,25 @@
       "target": "api::brand.brand",
       "inversedBy": "products"
     },
-    "countInPack": {
-      "type": "string",
-      "required": false
-    },
     "rank": {
       "type": "biginteger",
-      "required": false
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "variants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.variants",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
