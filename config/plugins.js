@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = ({ env }) => ({
   meilisearch: {
     config: {
       host: "http://localhost:7700",
@@ -49,4 +49,4 @@ module.exports = {
   'drag-drop-content-types': {
     enabled: true
   }
-}
+})
