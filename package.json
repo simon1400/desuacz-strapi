@@ -23,7 +23,6 @@
     "strapi-plugin-generate-data": "^1.0.22",
     "strapi-plugin-local-image-sharp": "^1.6.0",
     "strapi-plugin-meilisearch": "^0.9.1",
-    "strapi-plugin-placeholder": "^4.3.6",
     "strapi-plugin-sitemap": "^2.0.9"
   },
   "author": {
