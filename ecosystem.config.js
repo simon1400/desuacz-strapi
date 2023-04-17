@@ -14,7 +14,7 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'dimi',
+      user : 'root',
       host : ['164.90.191.142'],
       ref  : 'origin/withOutDb',
       repo : 'git@github.com:simon1400/desuacz-strapi.git',
