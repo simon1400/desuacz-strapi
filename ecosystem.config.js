@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name   : "Desua strapi demo",
+    name   : "Desua strapi",
     script : "yarn start",
     env_production: {
       HOST: "0.0.0.0",
@@ -15,10 +15,10 @@ module.exports = {
   deploy : {
     production : {
       user : 'dimi',
-      host : ['89.221.216.23'],
-      ref  : 'origin/v2',
+      host : ['164.90.191.142'],
+      ref  : 'origin/withOutDb',
       repo : 'git@github.com:simon1400/desuacz-strapi.git',
-      path : '/var/www/desuacz/strapi-new',
+      path : '/var/www/strapi',
       'post-deploy' : 'yarn && yarn build && pm2 reload ecosystem.config.js --env production',
     }
   }
